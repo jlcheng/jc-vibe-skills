@@ -1,0 +1,17 @@
+{
+  "name": "jc-vibe-skills",
+  "owner": {
+    "name": "John Cheng",
+    "email": "johnlicheng@gmail.com"
+  },
+  "metadata": {
+    "description": "John's experimental agent skills, published before they are fully tested"
+  },
+  "plugins": [
+    {
+      "name": "jc-vibe",
+      "source": "./plugins/jc-vibe",
+      "description": "Experimental skills from John; each skill's readiness and known limitations are recorded in EXPERIMENTS.md"
+    }
+  ]
+}

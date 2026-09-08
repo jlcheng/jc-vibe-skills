@@ -1,0 +1,9 @@
+{
+  "name": "jc-vibe",
+  "version": "0.1.0",
+  "description": "Experimental agent skills from John. See EXPERIMENTS.md for each skill's readiness and known limitations.",
+  "author": {
+    "name": "John Cheng",
+    "email": "johnlicheng@gmail.com"
+  }
+}
