@@ -113,7 +113,8 @@ availability through plugin enablement. The tested plugin skills remained callab
 same-named `off` entries, so do not subtract those entries from a plugin's skill count.
 Use each harness's current discovery rules; report the scope of an incomplete inventory and
 uncertainty when observations disagree. Do not infer who changed settings or when from a
-configuration snapshot.
+configuration snapshot. Before diagnosing a broken skill, resolve and check the referenced
+file itself. A filtered listing that omits scripts or hidden files does not prove they are missing.
 
 There is no universal list of uninstalled skills. Compare a named repository's catalog and
 referenced skill paths with observed installations and enabled state. Distinguish a missing

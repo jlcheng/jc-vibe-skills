@@ -101,3 +101,7 @@ proof of this candidate.
 A real Claude 0.4.3 session using a simulated one-tool-only inventory recommended an installed `plugin@marketplace` identifier as an install source. The workflow now distinguishes source arguments from installed identities, with the supported source-plus-plugin example. Repository inspection now explicitly covers complete manifests and resolved referenced paths; partial manifest reads had left gaps in guidance evidence. Final 0.4.4 acceptance remains pending.
 
 Two Claude-orchestrated 0.4.3 Codex children stalled before starting a session, with stderr `Reading additional input from stdin...`. The noninteractive examples now close stdin explicitly. These stalls are retained as failed checks, not skill behavior passes.
+
+### 0.4.5 inventory evidence correction
+
+A real Claude 0.4.4 session in the simulated version-mismatch workspace falsely diagnosed a missing Python script from a listing filtered to SKILL.md and JSON. The script was present in both copies throughout the test. Guidance now requires directly checking a referenced path before declaring it absent. The failure is retained; final0.4.5 acceptance remains pending.
