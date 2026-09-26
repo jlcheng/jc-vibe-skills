@@ -24,11 +24,12 @@ installation uses `~/.claude/skills/<name>/` and `~/.agents/skills/<name>/` inst
 an existing skill without checking its identity. For a remote source, fetch the repository and
 copy the selected complete skill folder, recording the commit.
 
-Start fresh actual harness processes. For example, from scratch, using the candidate's real name:
+Close standard input for noninteractive child processes so an inherited shell pipe cannot leave
+them waiting for additional input. Start fresh actual harness processes. For example, from scratch, using the candidate's real name:
 
 ```sh
-claude -p '/<name> <realistic task>' --output-format stream-json --verbose
-codex -a never exec --json -s workspace-write '$<name> <realistic task>'
+claude -p '/<name> <realistic task>' --output-format stream-json --verbose </dev/null
+codex -a never exec --json -s workspace-write '$<name> <realistic task>' </dev/null
 ```
 
 Read current CLI help before launching these commands. The tested Codex 0.157.1 supports

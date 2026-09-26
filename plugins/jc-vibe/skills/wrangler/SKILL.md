@@ -22,9 +22,11 @@ plainly and give the next useful step. Keep answers short without leaving out ei
 - Finish an installation action by checking installed content and a harmless skill invocation in
   fresh sessions of both tools. Read [testing.md](testing.md) for this verification. Avoid setup
   skills or unrelated configuration changes merely to prove loading; report any blocked check.
-- When he names someone else's repo, look at it yourself before advising: which catalogs it ships,
-  which plugins they list, or whether it has only skill folders. Then say which case in the
-  write-up it falls under.
+- Before advising on an installation, check `jc-plugin list`, inspect the source catalogs and
+  complete plugin manifests, and confirm the referenced skill paths resolve. Do this for a
+  local directory as well as someone else's repository. A plugin includes the manifest
+  entries, not necessarily every skill folder in the repository. Then identify its packaging
+  case in the write-up.
 - Prefer `jc-plugin` when the repo packages skills inside plugins. `npx skills` installs skills as
   files without plugin namespacing, losing namespaced commands and allowing names to collide across
   sources. Guide John through `jc-plugin install` for plugin-packaged skills. Use `npx skills` for

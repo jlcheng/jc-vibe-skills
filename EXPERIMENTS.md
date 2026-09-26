@@ -95,3 +95,9 @@ The supported `-s workspace-write` example now appears directly in testing.md, w
 to consult current help. Tests must preserve logs/artifacts before cleaning temporary discovery
 state. Final 0.4.3 acceptance remains to be run; successful 0.4.2 actions are not presented as
 proof of this candidate.
+
+### 0.4.4 installation guidance correction
+
+A real Claude 0.4.3 session using a simulated one-tool-only inventory recommended an installed `plugin@marketplace` identifier as an install source. The workflow now distinguishes source arguments from installed identities, with the supported source-plus-plugin example. Repository inspection now explicitly covers complete manifests and resolved referenced paths; partial manifest reads had left gaps in guidance evidence. Final 0.4.4 acceptance remains pending.
+
+Two Claude-orchestrated 0.4.3 Codex children stalled before starting a session, with stderr `Reading additional input from stdin...`. The noninteractive examples now close stdin explicitly. These stalls are retained as failed checks, not skill behavior passes.

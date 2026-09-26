@@ -28,6 +28,11 @@ jc-plugin uninstall <plugin>            # removes it from both
 `--dry-run` shows what `install`, `update`, or `uninstall` would run, without running it.
 `list --all` also shows the plugins Codex installs on its own.
 
+The `plugin@marketplace` value printed by `list` is an installed identity, not an installation
+source. To add a missing installation, inspect its source and use `install <source> [plugin]`;
+for example, `jc-plugin install https://github.com/mattpocock/skills mattpocock-skills`.
+Use the plugin name for `update` and `uninstall`.
+
 Sessions that are already open keep the old version. I start a new session to get the new one.
 
 ## Adding or changing one of my skills
