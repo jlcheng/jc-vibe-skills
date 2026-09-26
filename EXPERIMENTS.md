@@ -33,3 +33,23 @@ For each skill, record:
 - **0.3.0:** The workflow moved into `workflow.md`, written as John's own plan. The skill checks
   other people's repos itself.
 - **Ready to promote:** No.
+
+## Wrangler 0.4.0 verification in progress (2026-09-26)
+
+Evidence directory: `/Users/jcheng/Downloads/wrangler-evidence/`, evaluator status in `STATUS.md`.
+The original handoff is `/Users/jcheng/Downloads/handoff.txt`.
+
+- Baseline on 0.3.2: actual fresh Claude Code 2.1.283 and Codex 0.157.1 sessions for installation
+  advice, inventory, placement, testing advice, and standalone advice. Both tools omitted the
+  other harness in testing advice; inventory guidance was incomplete. Raw transcripts retained.
+- Harness mechanics: a standalone fixture with a relative JSON resource and Python script loaded
+  through project `.claude/skills` and `.agents/skills` links; both produced the exact receipt.
+  These fixture results establish standalone mechanics, not final Wrangler acceptance.
+- Commands: `claude -p` with JSON event output, `codex exec --json`, `jc-plugin list`, local
+  Python fixture script. Documentation and named public repositories are fetched over HTTPS;
+  actual harness prompts use the configured model services. No secrets belong in evidence.
+- 0.4.0 adds explicit cross-tool behavior testing and removes required jc-misc packaging for
+  standalone usage. Existing historical claims above are not proof of 0.4.0 behavior.
+- Outstanding: full final-candidate prompt matrix, real source/packaging action cells, state and
+  failure variations, held-back paraphrases, cleanup checks, and independent evidence review.
+  No claim of completion or promotion readiness. Not ready to promote.

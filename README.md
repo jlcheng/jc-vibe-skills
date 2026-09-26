@@ -14,7 +14,7 @@ jc-plugin install jlcheng/jc-vibe-skills jc-vibe
 
 | Plugin | Purpose |
 | -- | -- |
-| `jc-vibe` | Experimental skills awaiting validation or promotion to `jc-agent-skills`. Skills: `wrangler` (including installation from Claude-only catalogs with `jc-plugin`). |
+| `jc-vibe` | Experimental skills awaiting validation or promotion to `jc-agent-skills`. Skills: `wrangler` (plugin and standalone installation, inventory, placement, and testing in both tools). |
 
 ## Layout
 
@@ -22,12 +22,13 @@ jc-plugin install jlcheng/jc-vibe-skills jc-vibe
 .claude-plugin/marketplace.json      # Claude marketplace: jc-vibe-skills
 .agents/plugins/marketplace.json     # Codex marketplace: jc-vibe-skills
 plugins/jc-vibe/
-├── .claude-plugin/plugin.json       # plugin: jc-vibe, version 0.3.2
-├── .codex-plugin/plugin.json        # same plugin, for Codex, version 0.3.2
+├── .claude-plugin/plugin.json       # plugin: jc-vibe, version 0.4.0
+├── .codex-plugin/plugin.json        # same plugin, for Codex, version 0.4.0
 └── skills/
     └── wrangler/                    # manage skills and plugins with jc-plugin
         ├── SKILL.md
         ├── workflow.md              # John's write-up of the workflow wrangler follows
+        ├── testing.md               # standalone and plugin behavior testing in both tools
         └── agents/openai.yaml       # Codex: explicit invocation only
 EXPERIMENTS.md                       # readiness and limitations for each skill
 ```
@@ -37,6 +38,13 @@ EXPERIMENTS.md                       # readiness and limitations for each skill
 Once an experimental skill is tested and reviewed, move it to `jc-agent-skills`. Do not imply that a skill here is safe for production use.
 
 ## Change Log
+
+### 0.4.0 — 2026-09-26
+
+- Add standalone skill testing in both tools without plugin packaging or publication.
+- Distinguish plugin state from individual skills, instructional requests from actions, and
+  temporary testing from long-term placement. Document fresh-session behavior verification.
+- Behavioral validation is in progress; see EXPERIMENTS.md for the exact current limits.
 
 ### 0.3.2 — 2026-09-26
 

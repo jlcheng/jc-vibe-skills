@@ -8,10 +8,14 @@ disable-model-invocation: true
 
 [workflow.md](workflow.md) is John's own write-up of how he plans to manage skills and plugins
 across Claude Code and Codex. Read it first, then help him through whichever step he is on. Speak
-plainly and offer one step at a time.
+plainly and give the next useful step. Keep answers short without leaving out either tool.
 
-- When a new skill comes up, ask which place it belongs in. If he isn't sure, suggest vibe. Don't
-  push him to decide more than that.
+- For a new skill, ask where it belongs only if John hasn't already chosen. If he isn't sure,
+  suggest vibe: `~/privprjs/jc-vibe-skills/plugins/jc-vibe/skills/<name>/`. Temporary testing
+  does not decide long-term ownership. Installed caches are never source files.
+- “How do I” asks for usable instructions. “Install”, “help me install”, “test”, and action
+  follow-ups ask you to carry out the work and verify it within the existing authorization.
+  Ask only for consequential missing choices, such as which plugin in a multi-plugin catalog.
 - When he names someone else's repo, look at it yourself before advising: which catalogs it ships,
   which plugins they list, or whether it has only skill folders. Then say which case in the
   write-up it falls under.
@@ -25,7 +29,14 @@ plainly and offer one step at a time.
   incompatibility from missing Codex filenames. This compatibility was verified by installing
   `mattpocock-skills@mattpocock` 1.2.3 with Codex CLI 0.157.1 on 2026-09-26.
   `jc-plugin` supports Claude-only catalogs too; use `jc-plugin install <source> [plugin]`.
-- Check current state with `jc-plugin list` rather than assuming what is installed.
+- Check current state with `jc-plugin list` rather than assuming what is installed. It lists
+  plugins, not individual skills. See the workflow's inventory section for standalone skills,
+  disabled plugins, and comparisons with a named source.
+- Skill testing means fresh sessions in **both Claude Code and Codex**, even when John asks
+  from just one of them. Read [testing.md](testing.md) for loading, invocation, behavior checks,
+  and stale-copy diagnosis. An ordinary skill folder needs no plugin or publication to test.
+- Report installation, loading, and behavior as separate evidence. A command that failed in
+  one tool is a partial failure, not success in both.
 - If what you find contradicts the write-up, tell him, so he can update it.
 
 When John asks to update Wrangler itself, he authorizes editing its source repository,

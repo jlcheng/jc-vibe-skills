@@ -35,7 +35,8 @@ Sessions that are already open keep the old version. I start a new session to ge
 1. Edit or add the skill folder under `plugins/<plugin>/skills/` in vibe or published.
 2. Follow that repo's `CLAUDE.md`. Both repos make me raise the plugin version in the Claude and
    Codex manifests together. Without a new version, Claude may think nothing changed.
-3. Commit and push to `main`. Both tools install from GitHub, so unpushed edits don't reach them.
+3. For a GitHub release, commit and push to `main`. Test unpushed edits locally first; see
+   [Testing skills](testing.md). A local marketplace installation reads your local source.
 4. First time: `jc-plugin install jlcheng/<repo> <plugin>`. After that: `jc-plugin update <plugin>`.
 5. `jc-plugin list` should show the same new version for Claude and Codex.
 
@@ -69,6 +70,40 @@ Then check which catalogs the repo ships:
   from both with `jc-plugin uninstall mattpocock-skills`.
   Inspect the manifest and referenced files to assess the package. Successful installation
   establishes packaging compatibility; it does not verify every skill's behavior.
-- **No plugin catalog at all**, just skill folders. Vet the skills I want, then copy them into
-  `jc-agent-skills` under a plugin named `jc-misc`. They show up as `/jc-misc:<skill>` in both
-  tools. `jc-misc` doesn't exist yet; the first skill I copy in creates it.
+- **No plugin catalog at all**, just skill folders: install or test the complete chosen folder
+  using each tool's standalone skill location. Preserve its scripts and resources. Inspect a
+  GitHub checkout just as you would a local folder; a raw SKILL.md alone may omit dependencies.
+  See [Testing skills](testing.md). No plugin manifest, marketplace, publication, or namespaced
+  invocation is required. Putting selected third-party skills in a future `jc-misc` plugin is
+  a separate ownership decision, not a prerequisite for trying or using them.
+
+Source location and packaging are separate choices. A GitHub marketplace and its local checkout
+use the same `jc-plugin install <source> [plugin]` interface. Keep a requested local path local,
+quote paths with spaces, and resolve catalog plugin paths from the marketplace root and skill
+resources from their owning plugin or skill. A plugin subdirectory without a catalog is not
+necessarily an installable marketplace: inspect it and check current CLI behavior. Use the
+containing marketplace when available; don't invent a catalog for an instructional question.
+
+## Inventory and removal
+
+`jc-plugin list` reports each plugin's version and enabled state separately for Claude and Codex.
+A dash means missing; `(off)` means installed but disabled. Different versions or an installation
+in only one tool are not availability in both. `list --all` includes bundled Codex plugins.
+
+For individual skills, use the actual session's skill selector: `/` in Claude Code and `$` or
+`/skills` in Codex. Inspect the enabled plugins' manifests and their referenced skill directories
+when a file-level inventory is needed. Include standalone project skills at `.claude/skills/`
+(Claude) and `.agents/skills/` (Codex), personal skills at `~/.claude/skills/` and
+`~/.agents/skills/`, plus any legacy or configured locations exposed by the installed harness.
+Check SKILL.md and session discovery; counting directories or plugins does not count skills.
+
+There is no universal list of uninstalled skills. Compare a named repository's catalog and
+referenced skill paths with observed installations and enabled state. Distinguish a missing
+plugin from individual standalone copies. If no source is named, ask which repository or catalog
+John wants to compare. For “what skills and uninstalled”, briefly cover installed inventory,
+missing skills from a chosen source, and removal instead of guessing one meaning.
+
+For removal instructions, show `jc-plugin uninstall <plugin>` and the verification command.
+When asked to do it, run it, then inspect `jc-plugin list` for both tools. Remove only the requested
+plugin; its marketplace registration may remain. For standalone skills, remove the requested
+copy or link from the discovery location, preserving the source folder and unrelated skills.
