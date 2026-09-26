@@ -105,3 +105,31 @@ Two Claude-orchestrated 0.4.3 Codex children stalled before starting a session, 
 ### 0.4.5 inventory evidence correction
 
 A real Claude 0.4.4 session in the simulated version-mismatch workspace falsely diagnosed a missing Python script from a listing filtered to SKILL.md and JSON. The script was present in both copies throughout the test. Guidance now requires directly checking a referenced path before declaring it absent. The failure is retained; final0.4.5 acceptance remains pending.
+
+### 0.4.5 acceptance snapshot
+
+The complete final-candidate run recorded 94 case/harness outcomes against skill release
+`89a367b`: 66 PASS and 28 BLOCKED by Claude's reported usage/spend limit. This is not complete
+acceptance or promotion readiness. Claude Code 2.1.283 and Codex CLI 0.157.1 were actually
+invoked; the evaluator document/rubrics were kept out of tested-agent contexts. Guidance,
+held-back paraphrases, simulated state/failure fixtures, actual standalone receipt behavior,
+remote/local plugin operations, stale copies and Humanizer are represented separately.
+
+Both native plugin installations and Codex behavior succeeded for remote Claude-only and
+remote dual-catalog sources, and for local copies including a path with spaces and a relative
+path. Final Claude behavior repetitions remain unproven where quota interrupted them.
+Both P20 Humanizer installations and smoke tests succeeded before the limit; subsequent
+Claude rubric probes were blocked. Earlier Humanizer Claude rewrites invented meaning, and
+one final Codex rewrite has malformed CriticMarkup. Third-party quality is not claimed to
+pass universally. Validator compatibility limitations and incidental response caveats are
+recorded rather than omitted.
+
+Evidence and per-case prompts, commands, identities, setup, transcripts, timestamps and grades:
+`/Users/jcheng/Downloads/wrangler-evidence/REPORT.md` and `CASE-MATRIX.md`. Independent review
+found no material Wrangler failure in completed final cases. Global test plugin state was
+restored: marketplace snapshots exactly match the pre-action snapshots, unrelated plugin
+records are unchanged, and existing jc-code 1.6.1 is preserved. Scratch fixtures are retained
+for targeted retries of blocked cases. No HOME/CODEX_HOME override or global permission
+change was used. The user reported purchasing credits; subsequent availability checks still
+reported the monthly limit. Billing settings were not changed. The skill candidate remains
+0.4.5 for those retries; this entry only updates the evidence record.
