@@ -22,11 +22,12 @@ jc-plugin install jlcheng/jc-vibe-skills jc-vibe
 .claude-plugin/marketplace.json      # Claude marketplace: jc-vibe-skills
 .agents/plugins/marketplace.json     # Codex marketplace: jc-vibe-skills
 plugins/jc-vibe/
-├── .claude-plugin/plugin.json       # plugin: jc-vibe, version 0.2.1
-├── .codex-plugin/plugin.json        # same plugin, for Codex, version 0.2.1
+├── .claude-plugin/plugin.json       # plugin: jc-vibe, version 0.3.0
+├── .codex-plugin/plugin.json        # same plugin, for Codex, version 0.3.0
 └── skills/
     └── wrangler/                    # manage skills and plugins with jc-plugin
         ├── SKILL.md
+        ├── workflow.md              # John's write-up of the workflow wrangler follows
         └── agents/openai.yaml       # Codex: explicit invocation only
 EXPERIMENTS.md                       # readiness and limitations for each skill
 ```
@@ -36,6 +37,12 @@ EXPERIMENTS.md                       # readiness and limitations for each skill
 Once an experimental skill is tested and reviewed, move it to `jc-agent-skills`. Do not imply that a skill here is safe for production use.
 
 ## Change Log
+
+### 0.3.0 — 2026-09-26
+
+- `wrangler` now reads John's write-up of his workflow (`workflow.md`), checks someone else's repo
+  itself before advising, and covers skills that come with no plugin catalog: vet them, then copy
+  them into a new `jc-misc` plugin in `jc-agent-skills`.
 
 ### 0.2.1 — 2026-09-26
 

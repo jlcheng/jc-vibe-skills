@@ -22,5 +22,8 @@ For each skill, record:
   (2026-09-26).
 - **Not tested:** Whether its advice holds up across a real promotion from vibe to published.
 - **Limitations:** Describes `jc-plugin` as of 2026-09-26, which can't install Claude-only repos.
-  Local testing before pushing is not covered yet.
+  Local testing before pushing is not covered yet. The `jc-misc` plugin it recommends for copied
+  skills doesn't exist yet.
+- **0.3.0:** The workflow moved into `workflow.md`, written as John's own plan. The skill checks
+  other people's repos itself.
 - **Ready to promote:** No.
