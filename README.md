@@ -1,32 +1,31 @@
 # jc-vibe-skills
 
-A Claude Code plugin marketplace for experimental agent skills. Skills here are intentionally published before they are fully tested. Read [EXPERIMENTS.md](EXPERIMENTS.md) before installing or relying on one.
+A Claude Code and Codex plugin marketplace for experimental agent skills. Skills here are intentionally published before they are fully tested. Read [EXPERIMENTS.md](EXPERIMENTS.md) before installing or relying on one.
 
 ## Install
 
-```
-/plugin marketplace add jcheng/jc-vibe-skills
-/plugin install jc-vibe@jc-vibe-skills
-```
-
-While developing locally:
+Into both Claude Code and Codex:
 
 ```
-/plugin marketplace add ~/privprjs/jc-vibe-skills
+jc-plugin install jlcheng/jc-vibe-skills jc-vibe
 ```
 
 ## Plugins
 
 | Plugin | Purpose |
 | -- | -- |
-| `jc-vibe` | Experimental skills awaiting validation or promotion to `jc-agent-skills`. |
+| `jc-vibe` | Experimental skills awaiting validation or promotion to `jc-agent-skills`. Skills: `wrangler`. |
 
 ## Layout
 
 ```
-.claude-plugin/marketplace.json      # marketplace: jc-vibe-skills
+.claude-plugin/marketplace.json      # Claude marketplace: jc-vibe-skills
+.agents/plugins/marketplace.json     # Codex marketplace: jc-vibe-skills
 plugins/jc-vibe/
-└── .claude-plugin/plugin.json       # plugin: jc-vibe, version 0.1.0
+├── .claude-plugin/plugin.json       # plugin: jc-vibe, version 0.2.0
+├── .codex-plugin/plugin.json        # same plugin, for Codex, version 0.2.0
+└── skills/
+    └── wrangler/SKILL.md            # manage skills and plugins with jc-plugin
 EXPERIMENTS.md                       # readiness and limitations for each skill
 ```
 
@@ -35,6 +34,12 @@ EXPERIMENTS.md                       # readiness and limitations for each skill
 Once an experimental skill is tested and reviewed, move it to `jc-agent-skills`. Do not imply that a skill here is safe for production use.
 
 ## Change Log
+
+### 0.2.0 — 2026-09-26
+
+- Codex support: added a Codex marketplace and plugin manifest.
+- New skill `wrangler`: guides adding, promoting, installing, updating, and removing skills and
+  plugins across Claude Code and Codex with `jc-plugin`.
 
 ### 0.1.0 — 2026-09-07
 

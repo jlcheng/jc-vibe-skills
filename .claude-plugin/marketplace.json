@@ -11,7 +11,7 @@
     {
       "name": "jc-vibe",
       "source": "./plugins/jc-vibe",
-      "description": "Experimental skills from John; each skill's readiness and known limitations are recorded in EXPERIMENTS.md"
+      "description": "Experimental skills from John (wrangler: manage skills and plugins across Claude Code and Codex); readiness and limitations in EXPERIMENTS.md"
     }
   ]
 }

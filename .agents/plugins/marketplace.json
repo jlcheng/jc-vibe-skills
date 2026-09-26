@@ -1,0 +1,20 @@
+{
+  "name": "jc-vibe-skills",
+  "interface": {
+    "displayName": "John’s experimental agent skills"
+  },
+  "plugins": [
+    {
+      "name": "jc-vibe",
+      "source": {
+        "source": "local",
+        "path": "./plugins/jc-vibe"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
