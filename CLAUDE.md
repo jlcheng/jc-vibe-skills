@@ -15,3 +15,10 @@ Every skill change ships as a `jc-vibe` plugin version bump. Do all of these, in
 Skills may have their own `version` in `SKILL.md`; that is separate from the plugin version.
 
 Do not promote a skill to `jc-agent-skills` without testing and review.
+
+## Authorization for Wrangler iteration
+
+John authorizes agents updating Wrangler to edit this repository across workspace boundaries,
+commit and push the changes to GitHub, and refresh `jc-vibe` in both Claude Code and Codex
+with `jc-plugin update jc-vibe`. Complete these steps and verify the installed versions without
+asking again. This authorization covers Wrangler iteration, not unrelated repositories or plugins.

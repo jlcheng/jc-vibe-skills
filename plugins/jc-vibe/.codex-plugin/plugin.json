@@ -1,6 +1,6 @@
 {
   "name": "jc-vibe",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Experimental agent skills from John. Skills: wrangler (guide John through adding, promoting, installing, updating, and removing skills and plugins across Claude Code and Codex with jc-plugin). See EXPERIMENTS.md for each skill's readiness and known limitations.",
   "author": {
     "name": "John Cheng",

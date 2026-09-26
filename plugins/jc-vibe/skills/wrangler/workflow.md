@@ -63,13 +63,10 @@ Then check which catalogs the repo ships:
   `.agents/plugins/marketplace.json`): `jc-plugin install <owner/repo> [plugin]`.
 - **Only a Claude catalog.** Codex can read `.claude-plugin/marketplace.json` and the
   `.claude-plugin/plugin.json` it points to, including a `skills` array. Separate Codex files
-  are not required. This worked for `mattpocock/skills` with Codex CLI 0.157.1 on 2026-09-26.
-  `jc-plugin` currently requires both catalogs during its own preflight, so use each tool's
-  commands until it supports this fallback:
-  - Claude: `claude plugin marketplace add <source>`, then
-    `claude plugin install <plugin>@<marketplace> --scope user`.
-  - Codex: `codex plugin marketplace add <source>`, then
-    `codex plugin add <plugin>@<marketplace>`.
+  are not required. Use `jc-plugin install <source> [plugin]` here too. John verified
+  `jc-plugin install https://github.com/mattpocock/skills` on 2026-09-26: both Claude and
+  Codex reported `mattpocock-skills@mattpocock` 1.2.3. He then successfully removed it
+  from both with `jc-plugin uninstall mattpocock-skills`.
   Inspect the manifest and referenced files to assess the package. Successful installation
   establishes packaging compatibility; it does not verify every skill's behavior.
 - **No plugin catalog at all**, just skill folders. Vet the skills I want, then copy them into

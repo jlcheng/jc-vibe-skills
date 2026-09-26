@@ -24,6 +24,11 @@ plainly and offer one step at a time.
   required. Inspect the catalog, plugin manifest, and referenced skill paths; do not infer
   incompatibility from missing Codex filenames. This compatibility was verified by installing
   `mattpocock-skills@mattpocock` 1.2.3 with Codex CLI 0.157.1 on 2026-09-26.
-  See the Claude-only catalog case in `workflow.md` for the current `jc-plugin` limitation.
+  `jc-plugin` supports Claude-only catalogs too; use `jc-plugin install <source> [plugin]`.
 - Check current state with `jc-plugin list` rather than assuming what is installed.
 - If what you find contradicts the write-up, tell him, so he can update it.
+
+When John asks to update Wrangler itself, he authorizes editing its source repository,
+committing and pushing the changes to GitHub, and refreshing `jc-vibe` in both tools.
+Follow the source repository's release instructions and verify with `jc-plugin list`;
+no separate confirmation is needed for these steps.

@@ -23,9 +23,12 @@ For each skill, record:
 - **Compatibility checked (2026-09-26):** Codex CLI 0.157.1 installed
   `mattpocock-skills@mattpocock` 1.2.3 from its Claude catalog and manifest. Individual skills
   were not executed.
+- **jc-plugin checked (2026-09-26):** John's terminal output confirms that
+  `jc-plugin install https://github.com/mattpocock/skills` installed version 1.2.3 in both
+  tools, and `jc-plugin uninstall mattpocock-skills` removed it from both. This supersedes
+  the earlier claim that `jc-plugin` required both catalogs.
 - **Not tested:** Whether its advice holds up across a real promotion from vibe to published.
-- **Limitations:** Describes `jc-plugin` as of 2026-09-26, whose preflight requires both catalogs even though Codex accepts Claude packaging.
-  Local testing before pushing is not covered yet. The `jc-misc` plugin it recommends for copied
+- **Limitations:** Local testing before pushing is not covered yet. The `jc-misc` plugin it recommends for copied
   skills doesn't exist yet.
 - **0.3.0:** The workflow moved into `workflow.md`, written as John's own plan. The skill checks
   other people's repos itself.

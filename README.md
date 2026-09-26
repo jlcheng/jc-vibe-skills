@@ -14,7 +14,7 @@ jc-plugin install jlcheng/jc-vibe-skills jc-vibe
 
 | Plugin | Purpose |
 | -- | -- |
-| `jc-vibe` | Experimental skills awaiting validation or promotion to `jc-agent-skills`. Skills: `wrangler` (including Codex compatibility with Claude plugins). |
+| `jc-vibe` | Experimental skills awaiting validation or promotion to `jc-agent-skills`. Skills: `wrangler` (including installation from Claude-only catalogs with `jc-plugin`). |
 
 ## Layout
 
@@ -22,8 +22,8 @@ jc-plugin install jlcheng/jc-vibe-skills jc-vibe
 .claude-plugin/marketplace.json      # Claude marketplace: jc-vibe-skills
 .agents/plugins/marketplace.json     # Codex marketplace: jc-vibe-skills
 plugins/jc-vibe/
-├── .claude-plugin/plugin.json       # plugin: jc-vibe, version 0.3.1
-├── .codex-plugin/plugin.json        # same plugin, for Codex, version 0.3.1
+├── .claude-plugin/plugin.json       # plugin: jc-vibe, version 0.3.2
+├── .codex-plugin/plugin.json        # same plugin, for Codex, version 0.3.2
 └── skills/
     └── wrangler/                    # manage skills and plugins with jc-plugin
         ├── SKILL.md
@@ -37,6 +37,11 @@ EXPERIMENTS.md                       # readiness and limitations for each skill
 Once an experimental skill is tested and reviewed, move it to `jc-agent-skills`. Do not imply that a skill here is safe for production use.
 
 ## Change Log
+
+### 0.3.2 — 2026-09-26
+
+- Correct `wrangler` to use `jc-plugin` for Claude-only catalogs too, based on John's
+  successful installation and removal of Matt Pocock's plugin in both tools.
 
 ### 0.3.1 — 2026-09-26
 
