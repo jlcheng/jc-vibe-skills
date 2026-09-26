@@ -50,13 +50,28 @@ Its name changes, from `/jc-vibe:<skill>` to `/jc-code:<skill>`. That's fine.
 
 ## Plugins and skills from the real world
 
-Before installing, look at what the repo has. It depends on which catalogs it ships:
+Before installing, look at how the repo packages its skills. Prefer `jc-plugin` for skills shipped
+inside plugins. `npx skills` installs skill files without plugin namespacing, so it loses
+namespaced commands and allows names to collide across sources. That is a major limitation when
+using skills from plugins. Use `npx skills` for standalone skill folders when you specifically
+want editable files copied into a project. Don't recommend it as the default just because the repo
+also documents it.
+
+Then check which catalogs the repo ships:
 
 - **Both a Claude and a Codex catalog** (`.claude-plugin/marketplace.json` and
   `.agents/plugins/marketplace.json`): `jc-plugin install <owner/repo> [plugin]`.
-- **Only a Claude catalog.** This is most repos. `jc-plugin` can't install these into both tools
-  yet. Either install into Claude alone (`claude plugin marketplace add <source>`, then
-  `claude plugin install <plugin>@<marketplace> --scope user`), or treat it like the next case.
+- **Only a Claude catalog.** Codex can read `.claude-plugin/marketplace.json` and the
+  `.claude-plugin/plugin.json` it points to, including a `skills` array. Separate Codex files
+  are not required. This worked for `mattpocock/skills` with Codex CLI 0.157.1 on 2026-09-26.
+  `jc-plugin` currently requires both catalogs during its own preflight, so use each tool's
+  commands until it supports this fallback:
+  - Claude: `claude plugin marketplace add <source>`, then
+    `claude plugin install <plugin>@<marketplace> --scope user`.
+  - Codex: `codex plugin marketplace add <source>`, then
+    `codex plugin add <plugin>@<marketplace>`.
+  Inspect the manifest and referenced files to assess the package. Successful installation
+  establishes packaging compatibility; it does not verify every skill's behavior.
 - **No plugin catalog at all**, just skill folders. Vet the skills I want, then copy them into
   `jc-agent-skills` under a plugin named `jc-misc`. They show up as `/jc-misc:<skill>` in both
   tools. `jc-misc` doesn't exist yet; the first skill I copy in creates it.

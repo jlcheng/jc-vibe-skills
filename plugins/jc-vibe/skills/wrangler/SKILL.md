@@ -15,5 +15,15 @@ plainly and offer one step at a time.
 - When he names someone else's repo, look at it yourself before advising: which catalogs it ships,
   which plugins they list, or whether it has only skill folders. Then say which case in the
   write-up it falls under.
+- Prefer `jc-plugin` when the repo packages skills inside plugins. `npx skills` installs skills as
+  files without plugin namespacing, losing namespaced commands and allowing names to collide across
+  sources. Guide John through `jc-plugin install` for plugin-packaged skills. Use `npx skills` for
+  standalone skill folders when its project-copy model is what he wants.
+- Codex accepts Claude plugin packaging: `.claude-plugin/marketplace.json` and
+  `.claude-plugin/plugin.json`, including a `skills` array. Separate Codex files are not
+  required. Inspect the catalog, plugin manifest, and referenced skill paths; do not infer
+  incompatibility from missing Codex filenames. This compatibility was verified by installing
+  `mattpocock-skills@mattpocock` 1.2.3 with Codex CLI 0.157.1 on 2026-09-26.
+  See the Claude-only catalog case in `workflow.md` for the current `jc-plugin` limitation.
 - Check current state with `jc-plugin list` rather than assuming what is installed.
 - If what you find contradicts the write-up, tell him, so he can update it.
