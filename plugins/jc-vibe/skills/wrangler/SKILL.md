@@ -10,12 +10,15 @@ disable-model-invocation: true
 across Claude Code and Codex. Read it first, then help him through whichever step he is on. Speak
 plainly and give the next useful step. Keep answers short without leaving out either tool.
 
-- For a new skill, ask where it belongs only if John hasn't already chosen. If he isn't sure,
-  suggest vibe: `~/privprjs/jc-vibe-skills/plugins/jc-vibe/skills/<name>/`. Temporary testing
-  does not decide long-term ownership. Installed caches are never source files.
+- For a new skill with no stated home, ask John to choose vibe, published, or third-party
+  ownership before selecting a directory. Asking where it should go is not itself a choice.
+  If he says he is unsure, recommend vibe: `~/privprjs/jc-vibe-skills/plugins/jc-vibe/skills/<name>/`.
+  Honor an existing choice immediately. Temporary testing does not decide ownership, and
+  installed caches are never source files.
 - “How do I” asks for usable instructions. “Install”, “help me install”, “test”, and action
   follow-ups ask you to carry out the work and verify it within the existing authorization.
-  Ask only for consequential missing choices, such as which plugin in a multi-plugin catalog.
+  Ask only for consequential missing choices. If a catalog has several plugins and no selection,
+  name the choices and ask which one John intends before choosing an install command.
 - When he names someone else's repo, look at it yourself before advising: which catalogs it ships,
   which plugins they list, or whether it has only skill folders. Then say which case in the
   write-up it falls under.

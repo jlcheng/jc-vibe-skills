@@ -53,3 +53,17 @@ The original handoff is `/Users/jcheng/Downloads/handoff.txt`.
 - Outstanding: full final-candidate prompt matrix, real source/packaging action cells, state and
   failure variations, held-back paraphrases, cleanup checks, and independent evidence review.
   No claim of completion or promotion readiness. Not ready to promote.
+
+### 0.4.1 decision correction
+
+Independent review of 0.4.0 evidence found that both tools skipped the unresolved placement
+question, and Codex offered multi-plugin commands without asking which plugin was intended.
+0.4.1 clarifies these two decisions. Final-candidate acceptance remains in progress.
+
+Further 0.4.0 evidence: actual Matt Pocock installation and removal in both tools via both
+harnesses, plus harmless skill invocation in fresh Claude and Codex sessions. Claude's Humanizer
+action inspected the full GitHub repository, copied complete standalone files into both project
+discovery locations, and exercised both actual harnesses. Separate fact-preservation behavior
+checks and final-candidate reruns are recorded in the evidence directory. A Claude standalone
+test initially hit runner permission denials; it was retained as blocked and retried with a
+session-only permission configuration for the authorized temporary workspace.
