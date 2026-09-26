@@ -28,8 +28,12 @@ Start fresh actual harness processes. For example, from scratch, using the candi
 
 ```sh
 claude -p '/<name> <realistic task>' --output-format stream-json --verbose
-codex exec --json '$<name> <realistic task>'
+codex -a never exec --json -s workspace-write '$<name> <realistic task>'
 ```
+
+Read current CLI help before launching these commands. The tested Codex 0.157.1 supports
+`-s workspace-write`; it does not advertise the older `--full-auto` flag. Use the actual installed
+options rather than an option remembered from another version.
 
 Check permission settings so required file reads and benign actions can run; a denied tool call
 is a blocker to that check. Do not change the user's global permission settings for a test.
@@ -52,7 +56,9 @@ Record separately:
 Use independent fresh sessions for independent prompts and a continued session for follow-ups.
 Try an ordinary paraphrase, and a missing-resource or command failure: expect honest failure,
 not invented output. Keep prompt, transcript, tool results, CLI versions, candidate identity,
-pass/fail/blocker, and cleanup result. Report partial success accurately. Remove temporary links
+pass/fail/blocker, and cleanup result. Copy transcripts and checked outputs to a durable evidence
+folder before deleting scratch projects; cleanup should not erase the proof. Report partial
+success accurately. Remove temporary links
 and generated test state when finished, leaving the candidate source intact.
 
 ## Plugins and stale copies

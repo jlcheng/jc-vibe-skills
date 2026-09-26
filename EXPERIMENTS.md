@@ -81,3 +81,17 @@ tests preceded the GitHub-source equivalence fix; 25 tests, clippy and formattin
 The earlier Claude-catalog fallback is published at a327a7c, with parent-failure evidence retained.
 A transient Claude quota response was rechecked: later fresh sessions succeeded, so it is not
 currently classified as a persistent external blocker.
+
+### 0.4.3 discovery and test-run corrections
+
+0.4.2 tests exposed confusion between automatic visibility and callable skills. Current Claude
+skill documentation explicitly excludes plugin skills from `skillOverrides`; fresh init command
+catalogs and successful explicit invocations confirmed that behavior in 2.1.283. Earlier test
+responses subtracting nine same-named override entries from Matt's plugin were incorrect.
+No existing overrides were edited. 0.4.3 clarifies the scope and avoids inferred change history.
+
+Two Claude test orchestrations tried the retired Codex `--full-auto` flag before recovering.
+The supported `-s workspace-write` example now appears directly in testing.md, with a reminder
+to consult current help. Tests must preserve logs/artifacts before cleaning temporary discovery
+state. Final 0.4.3 acceptance remains to be run; successful 0.4.2 actions are not presented as
+proof of this candidate.

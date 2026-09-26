@@ -95,9 +95,20 @@ For individual skills, use the actual session's skill selector: `/` in Claude Co
 when a file-level inventory is needed. Include standalone project skills at `.claude/skills/`
 (Claude) and `.agents/skills/` (Codex), personal skills at `~/.claude/skills/` and
 `~/.agents/skills/`, plus any legacy or configured locations exposed by the installed harness.
-Check SKILL.md, effective per-skill enable/disable settings (including Claude's `skillOverrides`),
-and fresh-session discovery. A file on disk, or an enabled parent plugin, does not prove an
-individual skill is available. Counting directories or plugins does not count skills.
+Check SKILL.md, effective settings, and fresh-session discovery. Automatic visibility is not a
+complete inventory: `disable-model-invocation` and Codex `allow_implicit_invocation: false` make
+a skill explicit-only, not unavailable. Match discovered commands to manifests and standalone
+folders rather than counting every command or just the model's visible skill descriptions.
+
+Claude 2.1.283 exposes callable names in the `slash_commands` field of its fresh-session
+`--output-format stream-json --verbose` init event; this also includes built-in commands.
+Its [current skill documentation](https://code.claude.com/docs/en/skills#override-skill-visibility-from-settings)
+says `skillOverrides` applies to standalone/bundled skills, **not plugin skills**. Manage plugin
+availability through plugin enablement. The tested plugin skills remained callable despite
+same-named `off` entries, so do not subtract those entries from a plugin's skill count.
+Use each harness's current discovery rules; report the scope of an incomplete inventory and
+uncertainty when observations disagree. Do not infer who changed settings or when from a
+configuration snapshot.
 
 There is no universal list of uninstalled skills. Compare a named repository's catalog and
 referenced skill paths with observed installations and enabled state. Distinguish a missing
