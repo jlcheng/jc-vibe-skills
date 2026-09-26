@@ -22,10 +22,12 @@ jc-plugin install jlcheng/jc-vibe-skills jc-vibe
 .claude-plugin/marketplace.json      # Claude marketplace: jc-vibe-skills
 .agents/plugins/marketplace.json     # Codex marketplace: jc-vibe-skills
 plugins/jc-vibe/
-├── .claude-plugin/plugin.json       # plugin: jc-vibe, version 0.2.0
-├── .codex-plugin/plugin.json        # same plugin, for Codex, version 0.2.0
+├── .claude-plugin/plugin.json       # plugin: jc-vibe, version 0.2.1
+├── .codex-plugin/plugin.json        # same plugin, for Codex, version 0.2.1
 └── skills/
-    └── wrangler/SKILL.md            # manage skills and plugins with jc-plugin
+    └── wrangler/                    # manage skills and plugins with jc-plugin
+        ├── SKILL.md
+        └── agents/openai.yaml       # Codex: explicit invocation only
 EXPERIMENTS.md                       # readiness and limitations for each skill
 ```
 
@@ -34,6 +36,10 @@ EXPERIMENTS.md                       # readiness and limitations for each skill
 Once an experimental skill is tested and reviewed, move it to `jc-agent-skills`. Do not imply that a skill here is safe for production use.
 
 ## Change Log
+
+### 0.2.1 — 2026-09-26
+
+- `wrangler` now runs only when invoked by name, in both Claude Code and Codex.
 
 ### 0.2.0 — 2026-09-26
 

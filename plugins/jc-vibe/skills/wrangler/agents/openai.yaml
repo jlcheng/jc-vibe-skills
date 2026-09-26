@@ -1,0 +1,5 @@
+interface:
+  display_name: "Wrangler"
+  short_description: "Walk through adding, installing, and updating skills and plugins"
+policy:
+  allow_implicit_invocation: false

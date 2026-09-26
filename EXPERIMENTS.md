@@ -15,6 +15,7 @@ For each skill, record:
   belongs in (vibe, published, someone else's repo), and the `jc-plugin` commands to install,
   update, remove, and list plugins in Claude Code and Codex. Written by John and Claude on
   2026-09-26.
+- **Invocation:** By name only (`/jc-vibe:wrangler`, `$jc-vibe:wrangler`); neither tool starts it on its own.
 - **Commands and network:** The skill itself runs nothing. It suggests `jc-plugin`, `claude plugin`,
   `git` commands, which fetch from GitHub when run.
 - **Tested:** Installed through `jc-plugin` into both tools; a fresh session in each loaded it

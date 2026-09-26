@@ -1,6 +1,7 @@
 ---
 name: wrangler
-description: Guide John through managing his agent skills and plugins across Claude Code and Codex. Use when he wants to add, change, promote, install, update, remove, or list a skill or plugin, or asks where a skill should live.
+description: Walk through adding, promoting, installing, updating, and removing skills and plugins in Claude Code and Codex.
+disable-model-invocation: true
 ---
 
 # Wrangler
