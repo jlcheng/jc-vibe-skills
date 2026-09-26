@@ -19,6 +19,9 @@ plainly and give the next useful step. Keep answers short without leaving out ei
   follow-ups ask you to carry out the work and verify it within the existing authorization.
   Ask only for consequential missing choices. If a catalog has several plugins and no selection,
   name the choices and ask which one John intends before choosing an install command.
+- Finish an installation action by checking installed content and a harmless skill invocation in
+  fresh sessions of both tools. Read [testing.md](testing.md) for this verification. Avoid setup
+  skills or unrelated configuration changes merely to prove loading; report any blocked check.
 - When he names someone else's repo, look at it yourself before advising: which catalogs it ships,
   which plugins they list, or whether it has only skill folders. Then say which case in the
   write-up it falls under.
@@ -38,6 +41,8 @@ plainly and give the next useful step. Keep answers short without leaving out ei
 - Skill testing means fresh sessions in **both Claude Code and Codex**, even when John asks
   from just one of them. Read [testing.md](testing.md) for loading, invocation, behavior checks,
   and stale-copy diagnosis. An ordinary skill folder needs no plugin or publication to test.
+  For generic advice use candidate placeholders; for execution obtain its path if missing.
+  Invoking Wrangler does not identify Wrangler as the candidate being tested.
 - Report installation, loading, and behavior as separate evidence. A command that failed in
   one tool is a partial failure, not success in both.
 - If what you find contradicts the write-up, tell him, so he can update it.

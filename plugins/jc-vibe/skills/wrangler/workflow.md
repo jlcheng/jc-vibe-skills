@@ -95,7 +95,9 @@ For individual skills, use the actual session's skill selector: `/` in Claude Co
 when a file-level inventory is needed. Include standalone project skills at `.claude/skills/`
 (Claude) and `.agents/skills/` (Codex), personal skills at `~/.claude/skills/` and
 `~/.agents/skills/`, plus any legacy or configured locations exposed by the installed harness.
-Check SKILL.md and session discovery; counting directories or plugins does not count skills.
+Check SKILL.md, effective per-skill enable/disable settings (including Claude's `skillOverrides`),
+and fresh-session discovery. A file on disk, or an enabled parent plugin, does not prove an
+individual skill is available. Counting directories or plugins does not count skills.
 
 There is no universal list of uninstalled skills. Compare a named repository's catalog and
 referenced skill paths with observed installations and enabled state. Distinguish a missing

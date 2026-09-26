@@ -22,8 +22,8 @@ jc-plugin install jlcheng/jc-vibe-skills jc-vibe
 .claude-plugin/marketplace.json      # Claude marketplace: jc-vibe-skills
 .agents/plugins/marketplace.json     # Codex marketplace: jc-vibe-skills
 plugins/jc-vibe/
-├── .claude-plugin/plugin.json       # plugin: jc-vibe, version 0.4.1
-├── .codex-plugin/plugin.json        # same plugin, for Codex, version 0.4.1
+├── .claude-plugin/plugin.json       # plugin: jc-vibe, version 0.4.2
+├── .codex-plugin/plugin.json        # same plugin, for Codex, version 0.4.2
 └── skills/
     └── wrangler/                    # manage skills and plugins with jc-plugin
         ├── SKILL.md
@@ -38,6 +38,12 @@ EXPERIMENTS.md                       # readiness and limitations for each skill
 Once an experimental skill is tested and reviewed, move it to `jc-agent-skills`. Do not imply that a skill here is safe for production use.
 
 ## Change Log
+
+### 0.4.2 — 2026-09-26
+
+- Finish installation actions with harmless skill loading and behavior checks in both tools.
+- Account for individual disabled skills in inventory, and keep generic testing advice scoped
+  to the user's candidate rather than assuming Wrangler itself is being tested.
 
 ### 0.4.1 — 2026-09-26
 

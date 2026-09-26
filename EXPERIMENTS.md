@@ -67,3 +67,17 @@ discovery locations, and exercised both actual harnesses. Separate fact-preserva
 checks and final-candidate reruns are recorded in the evidence directory. A Claude standalone
 test initially hit runner permission denials; it was retained as blocked and retried with a
 session-only permission configuration for the authorized temporary workspace.
+
+### 0.4.2 completion of installation checks
+
+Review of 0.4.1 found that installation action sessions stopped at state/content checks for local
+and dual-catalog plugins, leaving fresh-session behavior to the evaluator. Inventory also treated
+some individually disabled skills as available. 0.4.2 corrects both behaviors and avoids assuming
+Wrangler is the candidate in generic testing advice. Final acceptance is still unproven.
+
+Supporting jc-plugin changes are published in privmono at a074bfd. Meaningful failing regression
+tests preceded the GitHub-source equivalence fix; 25 tests, clippy and formatting pass. The built
+~/bin/jc-plugin succeeds against real tools for shorthand with an existing HTTPS registration.
+The earlier Claude-catalog fallback is published at a327a7c, with parent-failure evidence retained.
+A transient Claude quota response was rechecked: later fresh sessions succeeded, so it is not
+currently classified as a persistent external blocker.
