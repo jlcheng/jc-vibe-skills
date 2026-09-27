@@ -172,3 +172,23 @@ conclusions apply to actual recorded models and harnesses, not every possible mo
 Nested behavior tests remain real Claude Code/Codex runs with their own recorded identities.
 
 0.4.7 has not yet passed full acceptance. No promotion is authorized or claimed.
+
+### 0.4.8 ownership, recovery and evidence corrections
+
+The 0.4.7 run completed70 records:44PASS,21BLOCKED by Claude's recurring monthly-spend
+response,5FAIL;24 further cases were stopped, not passed. Both harnesses defaulted unresolved
+ownership to vibe, and Codex repeated it on the held-back placement prompt. The entrypoint
+now explicitly asks John for an unresolved home, distinguishing that from a stated uncertainty
+or an already chosen home. A Claude simulated-version recovery also used an installed
+`plugin@marketplace` identity as an install source; the supported source/identity distinction
+and version-refresh operation now appear together in the entrypoint.
+
+Claude P20 successfully installed and loaded complete project copies but overwrote older files
+at a fixed temporary evidence path. Earlier outer/native session logs preserve substantive
+proof; this does not restore the original stdout bytes or reverse the failure. Testing guidance
+now calls for unique scratch/evidence directories. All known failures and recovered proof are
+retained under candidate-0.4.7 and its independent review. Global plugin state is preserved.
+
+Fresh explicit Opus and Sonnet availability requests both returned the spend-limit response.
+No billing, account, model-default or permission settings were changed.0.4.8 full acceptance
+is unproven; focused checks will precede another complete run when Claude capacity permits.

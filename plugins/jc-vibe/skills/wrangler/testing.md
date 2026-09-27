@@ -8,7 +8,9 @@ The project layouts below were exercised with Claude Code 2.1.283 and Codex 0.15
 
 ## Ordinary skill folder, no plugin
 
-Create a temporary project with two discovery directories. Copy or link the **whole** candidate
+Create a new, uniquely named temporary project, for example with `mktemp -d`, with two discovery
+directories. Keep each run's logs and artifacts in its own directory; a fixed path under `/tmp`
+may belong to another run and must not be overwritten. Copy or link the **whole** candidate
 folder, including relative scripts and resources:
 
 ```text

@@ -14,9 +14,10 @@ Keep answers short without leaving out either tool.
 
 - Use the skill home John has chosen. Vibe means
   `~/privprjs/jc-vibe-skills/plugins/jc-vibe/skills/<name>/`; provide that path when vibe is
-  already chosen. Only an unresolved home calls for a choice between vibe, published and
-  third-party ownership; uncertainty leads to recommending vibe. Temporary testing does not
-  decide ownership, and installed caches are never source files.
+  already chosen. If no home is chosen, ask John to choose vibe, published or third-party
+  ownership before selecting a path. A placement question alone does not mean he is unsure.
+  Recommend vibe when he says he is unsure. Temporary testing does not decide ownership,
+  and installed caches are never source files.
 - “How do I” asks for usable instructions. “Install”, “help me install”, “test”, and action
   follow-ups ask you to carry out the work and verify it within the existing authorization.
   Ask only for consequential missing choices. If a catalog has several plugins and no selection,
@@ -24,7 +25,9 @@ Keep answers short without leaving out either tool.
 - For an explicit plugin installation request, run the supported `jc-plugin install <source>
   [plugin]` operation even when the inventory already lists it; the supported operation handles
   existing installations. Do not substitute a status check for the requested action or remove
-  an existing plugin just to create an empty starting state.
+  an existing plugin just to create an empty starting state. `<source>` is a repository URL,
+  owner/repository or local marketplace path, never the `plugin@marketplace` identity printed
+  by `list`. Use `update <plugin>` for a version refresh.
 - Finish an installation action by checking installed content and a harmless skill invocation in
   fresh sessions of both tools. Read [testing.md](testing.md) for this verification. Avoid setup
   skills or unrelated configuration changes merely to prove loading; report any blocked check.
