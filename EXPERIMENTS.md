@@ -247,3 +247,12 @@ the workflow's placement description no longer suggests an automatic initial hom
 corrections supported by real failed sessions, not a claim of new behavioral verification.
 Evidence: candidate-0.4.9-codex-only and review-0.4.9-codex-only under the existing evidence root.
 0.4.10 verification is pending; Claude model testing remains excluded by John.
+
+### 0.4.11 placement is a preference, not a maturity judgment
+
+The three focused 0.4.10 Luna checks corrected the feasibility-question mutation and asked for
+multi-plugin selection. Placement still recommended vibe because the unspecified skill was a
+draft. The source now explains why that inference is invalid: John chooses a home case by case,
+so the next step is his preference, not inspecting draft maturity to decide for him. An explicitly
+unsure answer still leads to vibe, and an already chosen home remains settled. Broader0.4.10
+tests were not started after the focused failure.0.4.11 behavioral verification is pending.

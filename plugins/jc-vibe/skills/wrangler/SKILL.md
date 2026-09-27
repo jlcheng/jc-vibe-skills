@@ -20,11 +20,13 @@ install?” ask for an assessment or instructions, not installation. Inspecting 
 state helps answer them; changing installations does not. “Install”, “help me install”, “test”,
 and action follow-ups ask you to carry out the work within the existing authorization.
 
-- Use the skill home John has chosen. Vibe means
+- John chooses a skill's home case by case; being new, unfinished, or reusable does not decide
+  that preference. If he hasn't picked a home, first ask which he wants: vibe, published, or
+  third-party ownership. Wait for that choice before recommending a home or inspecting the
+  draft to infer one. If he answers that he is unsure, recommend vibe.
+  Use the skill home John has already chosen. Vibe means
   `~/privprjs/jc-vibe-skills/plugins/jc-vibe/skills/<name>/`; provide that path when vibe is
-  already chosen. If no home is chosen, ask John to choose vibe, published or third-party
-  ownership before selecting a path. A placement question alone does not mean he is unsure.
-  Recommend vibe when he says he is unsure. Temporary testing does not decide ownership,
+  already chosen. Temporary testing does not decide ownership,
   and installed caches are never source files.
 - Resolve a multi-plugin source's selection before supplying installation commands or executing
   them. If John has not selected a plugin, name the available choices and ask which he wants.
