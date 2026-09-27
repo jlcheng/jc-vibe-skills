@@ -7,14 +7,16 @@ disable-model-invocation: true
 # Wrangler
 
 [workflow.md](workflow.md) is John's own write-up of how he plans to manage skills and plugins
-across Claude Code and Codex. Read it first, then help him through whichever step he is on. Speak
-plainly and give the next useful step. Keep answers short without leaving out either tool.
+across Claude Code and Codex. Read it for the mechanics of the current task. The user's request
+and workspace instructions determine the chosen source, ownership and installation scope; keep
+those decisions when applying the workflow. Speak plainly and give the next useful step.
+Keep answers short without leaving out either tool.
 
-- For a new skill with no stated home, ask John to choose vibe, published, or third-party
-  ownership before selecting a directory. Asking where it should go is not itself a choice.
-  If he says he is unsure, recommend vibe: `~/privprjs/jc-vibe-skills/plugins/jc-vibe/skills/<name>/`.
-  Honor an existing choice immediately. Temporary testing does not decide ownership, and
-  installed caches are never source files.
+- Use the skill home John has chosen. Vibe means
+  `~/privprjs/jc-vibe-skills/plugins/jc-vibe/skills/<name>/`; provide that path when vibe is
+  already chosen. Only an unresolved home calls for a choice between vibe, published and
+  third-party ownership; uncertainty leads to recommending vibe. Temporary testing does not
+  decide ownership, and installed caches are never source files.
 - “How do I” asks for usable instructions. “Install”, “help me install”, “test”, and action
   follow-ups ask you to carry out the work and verify it within the existing authorization.
   Ask only for consequential missing choices. If a catalog has several plugins and no selection,
@@ -26,11 +28,11 @@ plainly and give the next useful step. Keep answers short without leaving out ei
 - Finish an installation action by checking installed content and a harmless skill invocation in
   fresh sessions of both tools. Read [testing.md](testing.md) for this verification. Avoid setup
   skills or unrelated configuration changes merely to prove loading; report any blocked check.
-- Before choosing or running an installation, check `jc-plugin list`, inspect the source catalogs
-  and complete plugin manifests, and check that each referenced skill path actually exists.
+- For installation questions and actions, first check `jc-plugin list`, inspect the source
+  catalogs and complete plugin manifests, and check that each referenced skill path exists.
   Manifest path strings alone are not a file check. This preflight applies to both advice and
-  action requests, for local directories as well as someone else's repository. A plugin includes the manifest
-  entries, not necessarily every skill folder in the repository. Then identify its packaging
+  action requests, including unresolved multi-plugin choices and local directories. A plugin
+  includes its manifest entries, not necessarily every skill folder. Then identify its packaging
   case in the write-up.
 - Prefer `jc-plugin` when the repo packages skills inside plugins. `npx skills` installs skills as
   files without plugin namespacing, losing namespaced commands and allowing names to collide across
@@ -42,9 +44,17 @@ plainly and give the next useful step. Keep answers short without leaving out ei
   incompatibility from missing Codex filenames. This compatibility was verified by installing
   `mattpocock-skills@mattpocock` 1.2.3 with Codex CLI 0.157.1 on 2026-09-26.
   `jc-plugin` supports Claude-only catalogs too; use `jc-plugin install <source> [plugin]`.
-- Check current state with `jc-plugin list` rather than assuming what is installed. It lists
-  plugins, not individual skills. See the workflow's inventory section for standalone skills,
-  disabled plugins, and comparisons with a named source.
+- `jc-plugin list` establishes plugin state only. A missing plugin does not establish that
+  all its skills are absent: standalone copies may exist. For a named-source comparison,
+  inspect that source and compare its actual skills against both plugin and standalone
+  installations. Disabled plugins are unavailable; explicit-only skills remain callable.
+  See the workflow's inventory section for discovery and the scope of skill overrides.
+- For standalone installation, honor the project or personal scope already specified in the
+  request or workspace. Copy or link the complete chosen skill folder, preserving resources;
+  a project-scoped request must not create personal installations. Project standalone skills
+  use `.claude/skills/` and `.agents/skills/`; the personal equivalents are `~/.claude/skills/`
+  and `~/.agents/skills/`. Read [testing.md](testing.md) for discovery and behavior checks,
+  and preserve test evidence before removing scratch files.
 - Skill testing means fresh sessions in **both Claude Code and Codex**, even when John asks
   from just one of them. Read [testing.md](testing.md) for loading, invocation, behavior checks,
   and stale-copy diagnosis. An ordinary skill folder needs no plugin or publication to test.

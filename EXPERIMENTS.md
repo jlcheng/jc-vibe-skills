@@ -153,3 +153,22 @@ and reported. These skill behavior failures remain distinct from competent testi
 0.4.6 requires a complete fresh acceptance run. No completion or promotion readiness is claimed.
 The supporting jc-plugin source and binary are unchanged. Source/installed identities, original
 failures, subsequent retries and independent grades remain in the evidence directory above.
+
+### 0.4.7 intent, scope and inventory corrections
+
+The 0.4.6 run exposed Claude failures to honor a selected vibe home and project installation
+scope, distinguish absent plugins from absent individual skills, check current state for a
+multi-plugin question, and use the current Codex standalone location. Its accidental personal
+Humanizer files were proven absent before the test, archived with hashes, then removed.
+No unsupported success is inferred from these attempts; remaining cases were stopped.
+Guidance now leads with settled user decisions, makes standalone scope/whole-folder handling
+explicit, and states the inventory distinctions at the entrypoint.
+
+Native session records also reveal model drift: prior Claude acceptance sessions used
+`claude-opus-5-5`; 0.4.6 defaulted to `claude-sonnet-5`. Subsequent outer Claude sessions will
+explicitly select the recorded Opus baseline with the supported `--model` flag. This controls
+a changed test condition, not a claim that Sonnet passed. Both models' results are retained;
+conclusions apply to actual recorded models and harnesses, not every possible model.
+Nested behavior tests remain real Claude Code/Codex runs with their own recorded identities.
+
+0.4.7 has not yet passed full acceptance. No promotion is authorized or claimed.
