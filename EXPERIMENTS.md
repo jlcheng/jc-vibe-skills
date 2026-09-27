@@ -283,3 +283,40 @@ still claimed14 extras where the pinned source has13. The verified25-entry plugi
 was correct. No broad0.4.12 run was started. The inventory guidance now handles that concrete
 failure: retry the counter independently or leave out the unverified total. Evidence and review
 remain in candidate-0.4.12-codex-only and review-0.4.12-codex-only.0.4.13 testing is pending.
+
+
+### 0.4.13 final Codex verification
+
+The final round passed all **46 applicable Codex acceptance cases**, plus three supplementary
+skill probes, against candidate `6ec8bef31ded5c8b534e6f0190a45747a5bffc0e`. Fresh sessions and
+the independent reviewer used the low-cost `gpt-6-luna` model with high reasoning effort.
+Native session records confirm this setting for all 49 outer cases. No earlier candidate's
+passes were substituted for this round; historical failures remain recorded.
+
+Coverage includes guidance versus action, plugin selection, chosen and unresolved skill homes,
+installed/missing/removal inventory meanings, standalone resource success and honest failure,
+stale standalone and plugin refresh, real GitHub and local source installation, paths with
+spaces and relative paths, and held-back paraphrases. The Humanizer probe preserved the date,
+pilot meaning, response times and ticket count; native skill-loading evidence is retained.
+Simulated disabled, one-tool, version-mismatch and command-failure cases remain labeled as
+fixtures, not live integration proof. The P5 comparison discloses its cached source and inspected
+standalone scopes; it does not claim a universal inventory.
+
+The user stopped Claude model testing. The 47 original Claude cells and the Codex probe dependent
+on a Claude-orchestrated installation are excluded, not passed. Native plugin operations still
+verified both registries. No Claude model/health calls were made in this round. Final native
+plugin and marketplace inventories in both tools exactly match the before-action snapshots,
+including unrelated and disabled entries; test-only source changes were restored.
+
+The source and both installed Wrangler copies match the tested 0.4.13 hashes. The supporting
+jc-plugin executable remains revision `a074bfda60375b55efc0b7e4a054a7ae79db9b62`, SHA256
+`4faa91a410c29b65b83a6403e110065cd1f7d9962d02ca4dd684386d5d733373`; its 25-test red/green,
+build, formatting and clippy evidence is retained. Real GitHub retrievals and native installs
+completed; recovered CLI setup errors are preserved rather than hidden.
+
+Durable evidence is `/Users/jcheng/Downloads/wrangler-evidence/REPORT.md`, with exact prompts,
+metadata, transcripts, artifacts, independent grades and cleanup audits linked from
+`CASE-MATRIX.md` and `case-index-0.4.13.json`. Reproduction and audit helpers are retained there,
+including `run_case_codex0413.py`, the scenario runners, and model/identity checks. The credential
+scan required no redactions. These are finite model-specific results, not proof for every prompt
+or current Claude behavior. Wrangler remains experimental in jc-vibe; no promotion was made.
