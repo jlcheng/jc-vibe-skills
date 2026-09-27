@@ -192,3 +192,20 @@ retained under candidate-0.4.7 and its independent review. Global plugin state i
 Fresh explicit Opus and Sonnet availability requests both returned the spend-limit response.
 No billing, account, model-default or permission settings were changed.0.4.8 full acceptance
 is unproven; focused checks will precede another complete run when Claude capacity permits.
+
+### 0.4.8 verification snapshot
+
+Independent review passes 31 Codex guidance, inventory/state and placement-follow-up cases
+on `68cb404` with Codex CLI 0.157.1 and actual model `gpt-6-astra`. Simulated inventories
+remain labeled; these are not 31 installation integrations. Both installed skill folders match
+the released source. The remaining 63 acceptance cells are unproven on this candidate.
+
+Fresh Claude Opus and Sonnet availability checks, including another after the Codex work,
+returned the monthly-spend-limit error. This is an observed service response, not proof of the
+actual account balance or spending cap. No billing or account settings were changed.
+The independent preservation audit passes for global marketplace/plugin state except the
+authorized Wrangler upgrade. Existing jc-code is unchanged. Fixtures and evidence are retained
+for pending cross-tool checks; acceptance and promotion readiness are still not established.
+
+Current evidence: `/Users/jcheng/Downloads/wrangler-evidence/REPORT.md`, `CASE-MATRIX.md`,
+`candidate-0.4.8/case-index.json` and `review-0.4.8.md`. Earlier failed attempts remain intact.
