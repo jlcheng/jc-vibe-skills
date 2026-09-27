@@ -62,7 +62,9 @@ and action follow-ups ask you to carry out the work within the existing authoriz
   inspect that source and compare its actual skills against both plugin and standalone
   installations. Disabled plugins are unavailable; explicit-only skills remain callable.
   Derive reported totals from the inspected files or manifest entries with a counting command;
-  distinguish catalog skills from additional folders rather than estimating their counts.
+  distinguish catalog skills from additional folders. If that command fails or never prints
+  the count, retry the counter alone or omit the unverified total. A displayed file listing is
+  not a measured count; limit the comparison to the entries actually verified.
   For “what skills and uninstalled”, briefly cover installed inventory, missing skills from
   a chosen source, and how to uninstall. That wording may mean either absence or removal.
   See the workflow's inventory section for discovery and the scope of skill overrides.

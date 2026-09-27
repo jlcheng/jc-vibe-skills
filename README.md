@@ -14,7 +14,7 @@ jc-plugin install jlcheng/jc-vibe-skills jc-vibe
 
 | Plugin | Purpose |
 | -- | -- |
-| `jc-vibe` | Experimental skills awaiting validation or promotion to `jc-agent-skills`. Skills: `wrangler` (plugin and standalone installation with source, intent, and ownership checks, counted inventory, placement, and testing the intended skill in both tools). |
+| `jc-vibe` | Experimental skills awaiting validation or promotion to `jc-agent-skills`. Skills: `wrangler` (plugin and standalone installation with source, intent, and ownership checks, verified inventory totals, placement, and testing the intended skill in both tools). |
 
 ## Layout
 
@@ -22,8 +22,8 @@ jc-plugin install jlcheng/jc-vibe-skills jc-vibe
 .claude-plugin/marketplace.json      # Claude marketplace: jc-vibe-skills
 .agents/plugins/marketplace.json     # Codex marketplace: jc-vibe-skills
 plugins/jc-vibe/
-├── .claude-plugin/plugin.json       # plugin: jc-vibe, version 0.4.12
-├── .codex-plugin/plugin.json        # same plugin, for Codex, version 0.4.12
+├── .claude-plugin/plugin.json       # plugin: jc-vibe, version 0.4.13
+├── .codex-plugin/plugin.json        # same plugin, for Codex, version 0.4.13
 └── skills/
     └── wrangler/                    # manage skills and plugins with jc-plugin
         ├── SKILL.md
@@ -38,6 +38,10 @@ EXPERIMENTS.md                       # readiness and limitations for each skill
 Once an experimental skill is tested and reviewed, move it to `jc-agent-skills`. Do not imply that a skill here is safe for production use.
 
 ## Change Log
+
+### 0.4.13 — 2026-09-26
+
+Retry a failed inventory counter independently or omit its unverified total instead of estimating from a file listing.
 
 ### 0.4.12 — 2026-09-26
 

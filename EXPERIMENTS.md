@@ -274,3 +274,12 @@ so it does not establish a counting fix. These attempts remain separately graded
 erase the standard-run failures. Subsequent verification uses the same low-cost Luna model
 with high reasoning effort, explicitly recorded as a changed test condition.0.4.12 verification
 is pending; no full acceptance claim is made. Claude model testing remains excluded.
+
+### 0.4.13 failed-counter fallback
+
+Focused0.4.12 verification passed P15 but P5 again reported an unsupported extra-folder total.
+Its source counter was chained after an unrelated no-match search and never ran; the answer
+still claimed14 extras where the pinned source has13. The verified25-entry plugin comparison
+was correct. No broad0.4.12 run was started. The inventory guidance now handles that concrete
+failure: retry the counter independently or leave out the unverified total. Evidence and review
+remain in candidate-0.4.12-codex-only and review-0.4.12-codex-only.0.4.13 testing is pending.
