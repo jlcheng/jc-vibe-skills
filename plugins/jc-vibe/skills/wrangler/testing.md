@@ -72,6 +72,12 @@ without publishing; use the marketplace root, not an assumed bare plugin path. C
 session-local `--plugin-dir`, but that alone is not a Codex test or a cross-tool install test.
 Preserve existing marketplace source registrations and unrelated installations.
 
+Invoke a packaged skill with the installed plugin's actual name from its manifest:
+`/<plugin>:<skill>` in Claude Code or `$<plugin>:<skill>` in Codex. The source directory
+name may differ from the plugin name. When names collide, a short skill name or another
+plugin's prefix can select different instructions; check the selected path before diagnosing
+a stale copy or unsupported invocation. Keep a working qualified invocation in the advice.
+
 For a released plugin, compare `jc-plugin list`, installed manifest versions, and loaded file
 content with the source commit. Follow the source repository's release process and run
 `jc-plugin update <plugin>` when appropriate, then launch fresh sessions in both tools.

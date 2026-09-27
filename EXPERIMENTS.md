@@ -209,3 +209,23 @@ for pending cross-tool checks; acceptance and promotion readiness are still not 
 
 Current evidence: `/Users/jcheng/Downloads/wrangler-evidence/REPORT.md`, `CASE-MATRIX.md`,
 `candidate-0.4.8/case-index.json` and `review-0.4.8.md`. Earlier failed attempts remain intact.
+
+### 0.4.9 plugin invocation identity correction
+
+John revised verification to Codex only and requested low-cost models. New outer and nested
+behavior checks use gpt-6-luna; no further Claude model tests or health probes are run.
+Native plugin installation/listing still checks both registries. The prior Astra checks and
+historical Claude results retain their original scope and are not relabeled as Luna coverage.
+
+The 0.4.8 Codex stale-plugin test refreshed the right cache and demonstrated changed behavior,
+but its final guidance confused a different plugin's qualified invocation with a loading failure
+and recommended an ambiguous short name. Direct checks prove both original and test plugin
+namespaces work and select their respective content. Testing guidance now ties qualification to
+the actual installed plugin manifest, rather than the source directory or a duplicate short name.
+Evidence and independent review: /Users/jcheng/Downloads/wrangler-evidence/,
+candidate-0.4.8-codex-only and review-0.4.8-codex-only.md. Receipt fixture response omissions
+and missing-output-parent failures were detected and reported; they are target-skill failures,
+not false claims of successful behavior. Test-created global plugins were removed and original
+marketplace registrations restored. No Claude behavior is claimed under the revised scope.
+
+0.4.9 verification is pending. No complete acceptance or promotion readiness is claimed.
