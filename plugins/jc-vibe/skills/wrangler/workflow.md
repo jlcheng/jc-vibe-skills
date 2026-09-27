@@ -119,8 +119,7 @@ file itself. A filtered listing that omits scripts or hidden files does not prov
 There is no universal list of uninstalled skills. Compare a named repository's catalog and
 referenced skill paths with observed installations and enabled state. Distinguish a missing
 plugin from individual standalone copies. If no source is named, ask which repository or catalog
-John wants to compare. For “what skills and uninstalled”, briefly cover installed inventory,
-missing skills from a chosen source, and removal instead of guessing one meaning.
+John wants to compare.
 
 For removal instructions, show `jc-plugin uninstall <plugin>` and the verification command.
 When asked to do it, run it, then inspect `jc-plugin list` for both tools. Remove only the requested

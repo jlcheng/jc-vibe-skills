@@ -61,6 +61,10 @@ and action follow-ups ask you to carry out the work within the existing authoriz
   all its skills are absent: standalone copies may exist. For a named-source comparison,
   inspect that source and compare its actual skills against both plugin and standalone
   installations. Disabled plugins are unavailable; explicit-only skills remain callable.
+  Derive reported totals from the inspected files or manifest entries with a counting command;
+  distinguish catalog skills from additional folders rather than estimating their counts.
+  For “what skills and uninstalled”, briefly cover installed inventory, missing skills from
+  a chosen source, and how to uninstall. That wording may mean either absence or removal.
   See the workflow's inventory section for discovery and the scope of skill overrides.
 - For standalone installation, honor the project or personal scope already specified in the
   request or workspace. Copy or link the complete chosen skill folder, preserving resources;

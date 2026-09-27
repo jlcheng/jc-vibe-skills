@@ -256,3 +256,21 @@ draft. The source now explains why that inference is invalid: John chooses a hom
 so the next step is his preference, not inspecting draft maturity to decide for him. An explicitly
 unsure answer still leads to vibe, and an already chosen home remains settled. Broader0.4.10
 tests were not started after the focused failure.0.4.11 behavioral verification is pending.
+
+### 0.4.12 inventory counting and ambiguity
+
+The 0.4.11 full Codex Luna round completed all 46 applicable cases plus three supplementary
+loading probes. It corrected the earlier intent, ownership, plugin-selection, and namespace
+failures. Two narrow Wrangler reporting misses remained: P5 hand-counted 38 source skill
+folders as 37 despite correctly verifying the 25 catalog skills, and P15 omitted removal from
+an ambiguous inventory answer. Existing ambiguity guidance moves from the workflow to the
+entrypoint; reported totals should be computed from actual files or manifest entries.
+
+The direct Humanizer test also lost the pilot context while preserving date and numbers.
+That is a third-party target behavior failure, separate from Wrangler installation/loading.
+A separate same-Luna high-reasoning comparison preserved the pilot context, but still missed
+P15's removal interpretation. The high P5 comparison observed different installation state,
+so it does not establish a counting fix. These attempts remain separately graded and do not
+erase the standard-run failures. Subsequent verification uses the same low-cost Luna model
+with high reasoning effort, explicitly recorded as a changed test condition.0.4.12 verification
+is pending; no full acceptance claim is made. Claude model testing remains excluded.
