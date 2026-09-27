@@ -229,3 +229,21 @@ not false claims of successful behavior. Test-created global plugins were remove
 marketplace registrations restored. No Claude behavior is claimed under the revised scope.
 
 0.4.9 verification is pending. No complete acceptance or promotion readiness is claimed.
+
+### 0.4.10 question intent and unresolved identity
+
+Fresh Codex Luna verification passes the 0.4.9 namespace regression but demonstrates three
+other decision failures: a multi-plugin question receives all install commands before a choice;
+an unnamed draft is assumed to be Wrangler and placed accordingly; and a feasibility question
+about a bare plugin directory triggers an actual install, including replacing an existing plugin
+source. The latter used a full-access test harness, unlike earlier read-only guidance sessions,
+which exposed the mutation. Its native source registration and installation were restored to the
+original GitHub source/version, with commands preserved. Remaining global action cases were
+stopped after these failures rather than spending on a known failing candidate.
+
+The entrypoint now leads with question versus action intent and keeps the managed candidate's
+identity separate from Wrangler. Multi-plugin selection remains unresolved until John chooses;
+the workflow's placement description no longer suggests an automatic initial home. These are
+corrections supported by real failed sessions, not a claim of new behavioral verification.
+Evidence: candidate-0.4.9-codex-only and review-0.4.9-codex-only under the existing evidence root.
+0.4.10 verification is pending; Claude model testing remains excluded by John.

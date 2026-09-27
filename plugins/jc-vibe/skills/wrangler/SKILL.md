@@ -12,16 +12,24 @@ and workspace instructions determine the chosen source, ownership and installati
 those decisions when applying the workflow. Speak plainly and give the next useful step.
 Keep answers short without leaving out either tool.
 
+Wrangler manages the skill John is asking about; invoking Wrangler does not make Wrangler the
+draft or candidate. Use the identity and choices supplied in his request, leaving unknowns open.
+
+First distinguish a question from an action request. “Can I install from here?” and “How do I
+install?” ask for an assessment or instructions, not installation. Inspecting files and current
+state helps answer them; changing installations does not. “Install”, “help me install”, “test”,
+and action follow-ups ask you to carry out the work within the existing authorization.
+
 - Use the skill home John has chosen. Vibe means
   `~/privprjs/jc-vibe-skills/plugins/jc-vibe/skills/<name>/`; provide that path when vibe is
   already chosen. If no home is chosen, ask John to choose vibe, published or third-party
   ownership before selecting a path. A placement question alone does not mean he is unsure.
   Recommend vibe when he says he is unsure. Temporary testing does not decide ownership,
   and installed caches are never source files.
-- “How do I” asks for usable instructions. “Install”, “help me install”, “test”, and action
-  follow-ups ask you to carry out the work and verify it within the existing authorization.
-  Ask only for consequential missing choices. If a catalog has several plugins and no selection,
-  name the choices and ask which one John intends before choosing an install command.
+- Resolve a multi-plugin source's selection before supplying installation commands or executing
+  them. If John has not selected a plugin, name the available choices and ask which he wants.
+  A list of install commands for all plugins does not resolve that choice. Ask only for
+  consequential missing choices; keep selections already made.
 - For an explicit plugin installation request, run the supported `jc-plugin install <source>
   [plugin]` operation even when the inventory already lists it; the supported operation handles
   existing installations. Do not substitute a status check for the requested action or remove
@@ -62,7 +70,6 @@ Keep answers short without leaving out either tool.
   from just one of them. Read [testing.md](testing.md) for loading, invocation, behavior checks,
   and stale-copy diagnosis. An ordinary skill folder needs no plugin or publication to test.
   For generic advice use candidate placeholders; for execution obtain its path if missing.
-  Invoking Wrangler does not identify Wrangler as the candidate being tested.
 - Report installation, loading, and behavior as separate evidence. A command that failed in
   one tool is a partial failure, not success in both.
 - If what you find contradicts the write-up, tell him, so he can update it.

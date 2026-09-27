@@ -9,12 +9,12 @@ them with `jc-plugin`, which runs each tool's own plugin commands for me.
 
 | Place          | Repo                                                                       | What goes there                                                  |
 | -------------- | -------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| Vibe           | `jlcheng/jc-vibe-skills` (`~/privprjs/jc-vibe-skills`), plugin `jc-vibe`   | Experiments I don't care much about. Most new skills start here. |
+| Vibe           | `jlcheng/jc-vibe-skills` (`~/privprjs/jc-vibe-skills`), plugin `jc-vibe`   | Experiments I choose to keep in vibe. |
 | Published      | `jlcheng/jc-agent-skills` (`~/privprjs/jc-agent-skills`), plugin `jc-code` | Skills I care enough about to publish.                           |
 | The real world | Someone else's repo, e.g. `mattpocock/skills`                              | Plugins I use as they are.                                       |
 
 I don't have a rule for vibe versus published. I decide each time. If I'm not sure, it goes in
-vibe; I can promote it later.
+vibe; I can promote it later. If I haven't made that choice yet, ask me before selecting a home.
 
 ## The commands
 
