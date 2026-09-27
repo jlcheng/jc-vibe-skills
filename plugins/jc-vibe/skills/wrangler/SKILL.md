@@ -19,12 +19,17 @@ plainly and give the next useful step. Keep answers short without leaving out ei
   follow-ups ask you to carry out the work and verify it within the existing authorization.
   Ask only for consequential missing choices. If a catalog has several plugins and no selection,
   name the choices and ask which one John intends before choosing an install command.
+- For an explicit plugin installation request, run the supported `jc-plugin install <source>
+  [plugin]` operation even when the inventory already lists it; the supported operation handles
+  existing installations. Do not substitute a status check for the requested action or remove
+  an existing plugin just to create an empty starting state.
 - Finish an installation action by checking installed content and a harmless skill invocation in
   fresh sessions of both tools. Read [testing.md](testing.md) for this verification. Avoid setup
   skills or unrelated configuration changes merely to prove loading; report any blocked check.
-- Before advising on an installation, check `jc-plugin list`, inspect the source catalogs and
-  complete plugin manifests, and confirm the referenced skill paths resolve. Do this for a
-  local directory as well as someone else's repository. A plugin includes the manifest
+- Before choosing or running an installation, check `jc-plugin list`, inspect the source catalogs
+  and complete plugin manifests, and check that each referenced skill path actually exists.
+  Manifest path strings alone are not a file check. This preflight applies to both advice and
+  action requests, for local directories as well as someone else's repository. A plugin includes the manifest
   entries, not necessarily every skill folder in the repository. Then identify its packaging
   case in the write-up.
 - Prefer `jc-plugin` when the repo packages skills inside plugins. `npx skills` installs skills as

@@ -11,6 +11,8 @@ For each skill, record:
 
 ## wrangler
 
+### Initial assessment (historical, 0.3.0)
+
 - **What it does:** Guides John through his skill workflow: which of his three places a skill
   belongs in (vibe, published, someone else's repo), and the `jc-plugin` commands to install,
   update, remove, and list plugins in Claude Code and Codex. Written by John and Claude on
@@ -133,3 +135,21 @@ for targeted retries of blocked cases. No HOME/CODEX_HOME override or global per
 change was used. The user reported purchasing credits; subsequent availability checks still
 reported the monthly limit. Billing settings were not changed. The skill candidate remains
 0.4.5 for those retries; this entry only updates the evidence record.
+
+### 0.4.6 installation action corrections
+
+After Claude capacity returned, 0.4.5 retries exposed two action failures: Claude P2 read
+the catalog and manifest but skipped checking referenced paths before installing; Claude P17
+only verified an existing installation instead of executing the explicit install request.
+Successful loading did not satisfy these separate requirements. The retained retry grades
+record both failures. Guidance now applies preflight explicitly to actions and uses the
+supported install operation for an already-listed plugin without destructive reset.
+
+Both Humanizer rubric probes executed after capacity returned. One Claude rewrite invented
+routing details and personal uncertainty; the other preserved the rubric facts. A receipt
+fixture also mishandled a relative output path in one Claude child, which Wrangler exposed
+and reported. These skill behavior failures remain distinct from competent testing.
+
+0.4.6 requires a complete fresh acceptance run. No completion or promotion readiness is claimed.
+The supporting jc-plugin source and binary are unchanged. Source/installed identities, original
+failures, subsequent retries and independent grades remain in the evidence directory above.
