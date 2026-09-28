@@ -11,6 +11,14 @@ For each skill, record:
 
 ## wrangler
 
+### 0.4.14 simplification (2026-09-27)
+
+- **What changed:** Simplified the entrypoint and workflow write-up and removed the separate testing guide.
+- **Commands and network:** The skill itself runs nothing. Its instructions refer to `jc-plugin`; those commands may access plugin sources over the network.
+- **Tested:** No behavior tests were run for this revision. The 0.4.13 results below apply to that earlier candidate, not this simplified version.
+- **Limitations:** Current behavior after simplification has not been evaluated. The skill remains experimental.
+- **Ready to promote:** No.
+
 ### Initial assessment (historical, 0.3.0)
 
 - **What it does:** Guides John through his skill workflow: which of his three places a skill

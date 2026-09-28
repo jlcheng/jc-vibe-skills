@@ -1,7 +1,7 @@
 {
   "name": "jc-vibe",
-  "version": "0.4.13",
-  "description": "Experimental agent skills from John. Skills: wrangler (manage plugins and standalone skills, inventory, placement, and behavior testing in Claude Code and Codex). See EXPERIMENTS.md for coverage and limitations.",
+  "version": "0.4.14",
+  "description": "Experimental agent skills from John. Skills: wrangler (manage skills and plugins across Claude Code and Codex). See EXPERIMENTS.md for coverage and limitations.",
   "author": {
     "name": "John Cheng",
     "email": "johnlicheng@gmail.com"
@@ -11,7 +11,7 @@
   "interface": {
     "displayName": "JC Vibe",
     "shortDescription": "John\u2019s experimental skills",
-    "longDescription": "Experimental agent skills from John. Skills: wrangler (manage plugins and standalone skills, inventory, placement, and behavior testing in Claude Code and Codex). See EXPERIMENTS.md for coverage and limitations.",
+    "longDescription": "Experimental agent skills from John. Skills: wrangler (manage skills and plugins across Claude Code and Codex). See EXPERIMENTS.md for coverage and limitations.",
     "developerName": "John Cheng",
     "category": "Productivity",
     "defaultPrompt": [
