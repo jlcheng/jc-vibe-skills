@@ -7,7 +7,7 @@ A Claude Code and Codex plugin marketplace for experimental agent skills. Skills
 Into both Claude Code and Codex:
 
 ```
-jc-plugin install jlcheng/jc-vibe-skills jc-vibe
+jc-plugins install jlcheng/jc-vibe-skills jc-vibe
 ```
 
 ## Plugins
@@ -25,7 +25,7 @@ plugins/jc-vibe/
 ├── .claude-plugin/plugin.json       # plugin: jc-vibe, version 0.4.14
 ├── .codex-plugin/plugin.json        # same plugin, for Codex, version 0.4.14
 └── skills/
-    └── wrangler/                    # manage skills and plugins with jc-plugin
+    └── wrangler/                    # manage skills and plugins with jc-plugins
         ├── SKILL.md
         ├── workflow.md              # John's write-up of the workflow wrangler follows
         └── agents/openai.yaml       # Codex: explicit invocation only
@@ -109,13 +109,13 @@ Wrangler distinguishes an installation source from the installed plugin identity
 
 ### 0.3.2 — 2026-09-26
 
-- Correct `wrangler` to use `jc-plugin` for Claude-only catalogs too, based on John's
+- Correct `wrangler` to use `jc-plugins` for Claude-only catalogs too, based on John's
   successful installation and removal of Matt Pocock's plugin in both tools.
 
 ### 0.3.1 — 2026-09-26
 
 - Teach `wrangler` that Codex accepts Claude catalogs and plugin manifests, and distinguish
-  that support from the current `jc-plugin` preflight limitation.
+  that support from the current `jc-plugins` preflight limitation.
 
 ### 0.3.0 — 2026-09-26
 
@@ -131,7 +131,7 @@ Wrangler distinguishes an installation source from the installed plugin identity
 
 - Codex support: added a Codex marketplace and plugin manifest.
 - New skill `wrangler`: guides adding, promoting, installing, updating, and removing skills and
-  plugins across Claude Code and Codex with `jc-plugin`.
+  plugins across Claude Code and Codex with `jc-plugins`.
 
 ### 0.1.0 — 2026-09-07
 

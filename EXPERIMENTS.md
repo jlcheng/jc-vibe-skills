@@ -14,7 +14,7 @@ For each skill, record:
 ### 0.4.14 simplification (2026-09-27)
 
 - **What changed:** Simplified the entrypoint and workflow write-up and removed the separate testing guide.
-- **Commands and network:** The skill itself runs nothing. Its instructions refer to `jc-plugin`; those commands may access plugin sources over the network.
+- **Commands and network:** The skill itself runs nothing. Its instructions refer to `jc-plugins`; those commands may access plugin sources over the network.
 - **Tested:** No behavior tests were run for this revision. The 0.4.13 results below apply to that earlier candidate, not this simplified version.
 - **Limitations:** Current behavior after simplification has not been evaluated. The skill remains experimental.
 - **Ready to promote:** No.
@@ -22,21 +22,21 @@ For each skill, record:
 ### Initial assessment (historical, 0.3.0)
 
 - **What it does:** Guides John through his skill workflow: which of his three places a skill
-  belongs in (vibe, published, someone else's repo), and the `jc-plugin` commands to install,
+  belongs in (vibe, published, someone else's repo), and the `jc-plugins` commands to install,
   update, remove, and list plugins in Claude Code and Codex. Written by John and Claude on
   2026-09-26.
 - **Invocation:** By name only (`/jc-vibe:wrangler`, `$jc-vibe:wrangler`); neither tool starts it on its own.
-- **Commands and network:** The skill itself runs nothing. It suggests `jc-plugin`, `claude plugin`,
+- **Commands and network:** The skill itself runs nothing. It suggests `jc-plugins`, `claude plugin`,
   `codex plugin`, and `git` commands, which fetch from GitHub when run.
-- **Tested:** Installed through `jc-plugin` into both tools; a fresh session in each loaded it
+- **Tested:** Installed through `jc-plugins` into both tools; a fresh session in each loaded it
   (2026-09-26).
 - **Compatibility checked (2026-09-26):** Codex CLI 0.157.1 installed
   `mattpocock-skills@mattpocock` 1.2.3 from its Claude catalog and manifest. Individual skills
   were not executed.
-- **jc-plugin checked (2026-09-26):** John's terminal output confirms that
-  `jc-plugin install https://github.com/mattpocock/skills` installed version 1.2.3 in both
-  tools, and `jc-plugin uninstall mattpocock-skills` removed it from both. This supersedes
-  the earlier claim that `jc-plugin` required both catalogs.
+- **jc-plugins checked (2026-09-26):** John's terminal output confirms that
+  `jc-plugins install https://github.com/mattpocock/skills` installed version 1.2.3 in both
+  tools, and `jc-plugins uninstall mattpocock-skills` removed it from both. This supersedes
+  the earlier claim that `jc-plugins` required both catalogs.
 - **Not tested:** Whether its advice holds up across a real promotion from vibe to published.
 - **Limitations:** Local testing before pushing is not covered yet. The `jc-misc` plugin it recommends for copied
   skills doesn't exist yet.
@@ -55,7 +55,7 @@ The original handoff is `/Users/jcheng/Downloads/handoff.txt`.
 - Harness mechanics: a standalone fixture with a relative JSON resource and Python script loaded
   through project `.claude/skills` and `.agents/skills` links; both produced the exact receipt.
   These fixture results establish standalone mechanics, not final Wrangler acceptance.
-- Commands: `claude -p` with JSON event output, `codex exec --json`, `jc-plugin list`, local
+- Commands: `claude -p` with JSON event output, `codex exec --json`, `jc-plugins list`, local
   Python fixture script. Documentation and named public repositories are fetched over HTTPS;
   actual harness prompts use the configured model services. No secrets belong in evidence.
 - 0.4.0 adds explicit cross-tool behavior testing and removes required jc-misc packaging for
@@ -85,9 +85,9 @@ and dual-catalog plugins, leaving fresh-session behavior to the evaluator. Inven
 some individually disabled skills as available. 0.4.2 corrects both behaviors and avoids assuming
 Wrangler is the candidate in generic testing advice. Final acceptance is still unproven.
 
-Supporting jc-plugin changes are published in privmono at a074bfd. Meaningful failing regression
+Supporting jc-plugins changes are published in privmono at a074bfd. Meaningful failing regression
 tests preceded the GitHub-source equivalence fix; 25 tests, clippy and formatting pass. The built
-~/bin/jc-plugin succeeds against real tools for shorthand with an existing HTTPS registration.
+~/bin/jc-plugins succeeds against real tools for shorthand with an existing HTTPS registration.
 The earlier Claude-catalog fallback is published at a327a7c, with parent-failure evidence retained.
 A transient Claude quota response was rechecked: later fresh sessions succeeded, so it is not
 currently classified as a persistent external blocker.
@@ -159,7 +159,7 @@ fixture also mishandled a relative output path in one Claude child, which Wrangl
 and reported. These skill behavior failures remain distinct from competent testing.
 
 0.4.6 requires a complete fresh acceptance run. No completion or promotion readiness is claimed.
-The supporting jc-plugin source and binary are unchanged. Source/installed identities, original
+The supporting jc-plugins source and binary are unchanged. Source/installed identities, original
 failures, subsequent retries and independent grades remain in the evidence directory above.
 
 ### 0.4.7 intent, scope and inventory corrections
@@ -317,7 +317,7 @@ plugin and marketplace inventories in both tools exactly match the before-action
 including unrelated and disabled entries; test-only source changes were restored.
 
 The source and both installed Wrangler copies match the tested 0.4.13 hashes. The supporting
-jc-plugin executable remains revision `a074bfda60375b55efc0b7e4a054a7ae79db9b62`, SHA256
+jc-plugins executable remains revision `a074bfda60375b55efc0b7e4a054a7ae79db9b62`, SHA256
 `4faa91a410c29b65b83a6403e110065cd1f7d9962d02ca4dd684386d5d733373`; its 25-test red/green,
 build, formatting and clippy evidence is retained. Real GitHub retrievals and native installs
 completed; recovered CLI setup errors are preserved rather than hidden.
